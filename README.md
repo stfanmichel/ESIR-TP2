@@ -106,3 +106,31 @@ Ceci vous permettra également de vous y retrouver lorsque le correctif vous ser
    On utilisera ici la méthode 'common.js' classique (https://slides.com/stephmichel/node-js#/11/2), la gestion des modules à la mode ES6 n'est pas encore disponible avec node.js. Ceci dit il serait possible de l'utiliser grâce au transpileur Babel mais cela complexifierait un peu trop le TP.
    
    (tag: TP2-ESIR-STEP3)
+
+ # STEP 4 : Le même en asynchrone (a litle bit tricky)
+   
+   Modifier le code précédent pour en faire une fonction asynchrone.
+   La signature deviendra quelque chose comme :
+   
+     fileProperties(path, callback)
+   
+   où callback est une fonction qui a pour signature :
+     
+     callback(err, result)
+   
+   Voir ici pour un rappel sur les fonctions asynchrones : https://slides.com/stephmichel/ecmascript#/7/2
+   
+   Ca c'est la partie facile, maintenant il faut également utiliser les version asynchrone de fs, à savoir fs.readdir (https://nodejs.org/api/fs.html#fs_fs_readdir_path_options_callback) au lieu de fs.readdirsync et fs.stat (https://nodejs.org/api/fs.html#fs_fs_stat_path_options_callback) au lieu de fs.statSync.
+   
+   Vous risquez en plus de devoir utiliser le très populaire module async (https://www.npmjs.com/package/async) et en particulier la méthode reduce dont je rappelle ici l'usage.
+   
+    async.reduce([1,2,3], 0, (memo, item, callback) => {
+      // pointless async:
+      process.nextTick(function(){
+        callback(null, memo + item)
+      })
+    }, (err, result) => {
+      // result is now equal to the last value of memo, which is 6
+    })
+   
+   (tag: TP2-ESIR-STEP3)
