@@ -4,6 +4,7 @@
   "description": "Asynchronisme et fs",
   "main": "index.js",
   "scripts": {
+    "start": "set DEBUG=tp2-server && nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/stfanmichel/ESIR-TP2/issues"
   },
-  "homepage": "https://github.com/stfanmichel/ESIR-TP2#readme"
+  "homepage": "https://github.com/stfanmichel/ESIR-TP2#readme",
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  },
+  "dependencies": {
+    "debug": "^4.1.1"
+  }
 }
