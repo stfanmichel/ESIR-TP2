@@ -107,7 +107,7 @@ Ceci vous permettra également de vous y retrouver lorsque le correctif vous ser
    
    (tag: TP2-ESIR-STEP3)
 
- # STEP 4 : Le même en asynchrone (a litle bit tricky)
+ # STEP 4 : Le même en asynchrone (a little bit tricky)
    
    Modifier le code précédent pour en faire une fonction asynchrone.
    La signature deviendra quelque chose comme :
