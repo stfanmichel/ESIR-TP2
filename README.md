@@ -99,7 +99,7 @@ Ceci vous permettra également de vous y retrouver lorsque le correctif vous ser
    
    (tag: TP2-ESIR-STEP2)
    
-   # STEP 3 : Déplacer le coeur de la méthode 
+   # STEP 3 : Déplacer le coeur de la méthode dans un module
    
    Déplacer le code "fonctionnel" relatif à la récupération des propriétés des fichiers d'un path dans un module externe. Le module devra fournir une méthode qui retourne le tableau d'objets dont nous avons parlés au step 2. 
    
