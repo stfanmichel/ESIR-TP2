@@ -105,6 +105,9 @@ Ceci vous permettra également de vous y retrouver lorsque le correctif vous ser
    
    On utilisera ici la méthode 'common.js' classique (https://slides.com/stephmichel/node-js#/11/2), la gestion des modules à la mode ES6 n'est pas encore disponible avec node.js. Ceci dit il serait possible de l'utiliser grâce au transpileur Babel mais cela complexifierait un peu trop le TP.
    
+   Faite des mesures de performance en prenant un répertoire avec de nombreux fichier (node_modules par exemple) avec ab.
+   Conserver les résultats pour les comparer à ceux du step 4.
+   
    (tag: TP2-ESIR-STEP3)
 
  # STEP 4 : Le même en asynchrone (a little bit tricky)
@@ -124,13 +127,21 @@ Ceci vous permettra également de vous y retrouver lorsque le correctif vous ser
    
    Vous risquez en plus de devoir utiliser le très populaire module async (https://www.npmjs.com/package/async) et en particulier la méthode reduce dont je rappelle ici l'usage.
    
-    async.reduce([1,2,3], 0, (memo, item, callback) => {
+    async.reduce([UN_TABLEAU_D_ITEM], [], (memo, item, callback) => {
       // pointless async:
-      process.nextTick(function(){
-        callback(null, memo + item)
+      uneFonctionAsynchrone(param,(err,result){
+        if (err){
+          callback(err)
+        } else {
+          memo.push(result)
+          callback(null, memo)
+        }
       })
     }, (err, result) => {
       // result is now equal to the last value of memo, which is 6
     })
    
-   (tag: TP2-ESIR-STEP3)
+   Faite des mesures de performance en prenant un répertoire avec de nombreux fichier (node_modules par exemple) avec ab.
+   Conserver ces résultats pour les comparer à ceux du step 3.
+   
+   (tag: TP2-ESIR-STEP4)
