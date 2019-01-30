@@ -4,7 +4,7 @@
   "description": "Asynchronisme et fs",
   "main": "index.js",
   "scripts": {
-    "start": "set DEBUG=tp2-server && nodemon index.js",
+    "start": "set DEBUG=tp2-* && nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

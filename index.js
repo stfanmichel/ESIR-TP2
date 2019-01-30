@@ -3,8 +3,8 @@
 */
 
 const http = require('http')
-const fs = require('fs')
 const debug = require('debug')('tp2-server')
+const {fileProperties} = require('./lib/fileProperties')
 
 const port = 8000
 const path = '.'
@@ -14,15 +14,9 @@ debug('Booting')
 // Configure our HTTP server
 const server = http.createServer((req, res) => {
     debug(`Request received ${req.method} ${req.url}`)
-    const files = fs.readdirSync(path)
 
-    const result = []
-    files.forEach(file => {
-        result.push({
-            name: file,
-            properties: fs.statSync(path + "/" + file)
-        })
-    })
+    // Get file properties with file fileProperties module
+    const result = fileProperties(path)
 
     res.writeHead(200, {"Content-Type": "application/json"})
     res.end(JSON.stringify(result))
