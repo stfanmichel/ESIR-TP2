@@ -71,18 +71,21 @@ Ceci vous permettra également de vous y retrouver lorsque le correctif vous ser
   # Ajout de modules au projet
 
   Dans ce TP nous allons avoir besoin des modules suivants :
-    - fs (mais il est présent par défaut, donc pas besoin de l'installer) :  https://nodejs.org/dist/latest-v10.x/docs/api/fs.html
-    - http (pareil, présent par défaut). Doc ici  https://nodejs.org/dist/latest-v10.x/docs/api/http.html
-    - 
-    - debug (https://slides.com/stephmichel/node-js#/12/4)
-    - winston (https://slides.com/stephmichel/node-js#/9/8)
-    - colors (https://www.npmjs.com/package/colors), pour mettre un peu de gaieté dans tout ça...
+   - fs (mais il est présent par défaut, donc pas besoin de l'installer) :  https://nodejs.org/dist/latest-v10.x/docs/api/fs.html
     
-   (tag: TP2-ESIR-MODULES)
+   - http (pareil, présent par défaut). Doc ici  https://nodejs.org/dist/latest-v10.x/docs/api/http.html
     
-  # STEP 1 : Création d'un serveur Web qui retourne la liste des fichiers d'un répertoire
+   - debug (https://slides.com/stephmichel/node-js#/12/4)
+    
+   - winston (https://slides.com/stephmichel/node-js#/9/8)
+    
+   - colors (https://www.npmjs.com/package/colors), pour mettre un peu de gaieté dans tout ça...
+    
+  # STEP 1 : Création d'un serveur Web qui retourne la liste des fichiers d'un répertoire (avec une méthode synchrone)
     
    S'inspirer du TP1 pour réaliser un serveur Web (avec le module http) qui retourne au format JSON la liste des fichiers d'un répertoire (juste le nom dans un premier temps). Utiliser pour cela le module fs.
+   
+   On va voir que les méthodes synchrone c'est le mal mais en attendant, pour l'exercice, utiliser la méthode fs.readdirsync ( https://nodejs.org/api/fs.html#fs_fs_readdirsync_path_options ). Ici encore un JSON.stringify() permettra de convertir le tableau Javascript en JSON.
    
    (tag: TP2-ESIR-STEP1)
    
