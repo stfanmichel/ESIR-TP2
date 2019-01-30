@@ -92,9 +92,11 @@ Ceci vous permettra également de vous y retrouver lorsque le correctif vous ser
    # STEP 2 : Retourner, pour chaque fichier de la liste ses propriétés (taille, dates, etc.)
    
    Ici encode utiliser le module fs.
+   
    On utilisera la méthode fs.statSync() (https://nodejs.org/api/fs.html#fs_fs_statsync_path_options) pour récupérer les propriétés d'un fichier.
+   
    On peut imaginer comme retour un tableau d'objets. Chaque object aura une propriété "name" correspondant au nom du fichier et une propriété "properties" correspondant aux propriétés du fichier (retournées par fs.statSync())
    
-   (tag: TP2-ESIR-STEP1)
+   (tag: TP2-ESIR-STEP2)
    
    # STEP 3 : Déplacer le coeur de la méthode 
