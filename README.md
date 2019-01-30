@@ -100,3 +100,9 @@ Ceci vous permettra également de vous y retrouver lorsque le correctif vous ser
    (tag: TP2-ESIR-STEP2)
    
    # STEP 3 : Déplacer le coeur de la méthode 
+   
+   Déplacer le code "fonctionnel" relatif à la récupération des propriétés des fichiers d'un path dans un module externe. Le module devra fournir une méthode qui retourne le tableau d'objets dont nous avons parlés au step 2. 
+   
+   On utilisera ici la méthode 'common.js' classique (https://slides.com/stephmichel/node-js#/11/2), la gestion des modules à la mode ES6 n'est pas encore disponible avec node.js. Ceci dit il serait possible de l'utiliser grâce au transpileur Babel mais cela complexifierait un peu trop le TP.
+   
+   (tag: TP2-ESIR-STEP3)
