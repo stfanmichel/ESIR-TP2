@@ -112,7 +112,7 @@ Ceci vous permettra également de vous y retrouver lorsque le correctif vous ser
 
  # STEP 4 : Le même en asynchrone (a little bit tricky)
    
-   Modifier le code précédent pour en faire une fonction asynchrone.
+   Modifier le code précédent pour en faire une fonction asynchrone avec un callback.
    La signature deviendra quelque chose comme :
    
      fileProperties(path, callback)
@@ -145,3 +145,15 @@ Ceci vous permettra également de vous y retrouver lorsque le correctif vous ser
    Conserver ces résultats pour les comparer à ceux du step 3.
    
    (tag: TP2-ESIR-STEP4)
+
+# STEP 5 : Le même avec des promesses (promise)
+   
+   Modifier le code précédent pour en faire une fonction asynchrone avec une promesse.
+   La signature deviendra quelque chose comme :
+   
+    fileProperties(path)
+    et retourne un objet Promise
+    
+   Modifier également le code de la fonction pour utiliser fs.promises (https://nodejs.org/dist/latest-v10.x/docs/api/fs.html#fs_fs_promises_api) au lieu de fs. On remplacera en particulier la méthode fs.readdir par fsPromises.readdir  (https://nodejs.org/dist/latest-v10.x/docs/api/fs.html#fs_fspromises_readdir_path_options).
+   
+   
