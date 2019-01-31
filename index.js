@@ -16,7 +16,7 @@ const server = http.createServer((req, res) => {
     debug(`Request received ${req.method} ${req.url}`)
 
     // Get file properties with file fileProperties module
-    fileProperties(path, (err, result) => {
+    fileProperties(path).then(result => {
         res.writeHead(200, {"Content-Type": "application/json"})
         res.end(JSON.stringify(result))
     })
