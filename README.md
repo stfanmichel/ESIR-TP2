@@ -154,6 +154,8 @@ Ceci vous permettra également de vous y retrouver lorsque le correctif vous ser
     fileProperties(path)
     et retourne un objet Promise
     
+   Voir ici pour un rappel sur les promises : https://slides.com/stephmichel/ecmascript#/7/5
+   
    Modifier également le code de la fonction pour utiliser fs.promises (https://nodejs.org/dist/latest-v10.x/docs/api/fs.html#fs_fs_promises_api) au lieu de fs. On remplacera en particulier la méthode fs.readdir par fsPromises.readdir  (https://nodejs.org/dist/latest-v10.x/docs/api/fs.html#fs_fspromises_readdir_path_options).
    
    
