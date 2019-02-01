@@ -184,4 +184,4 @@ Ceci vous permettra également de vous y retrouver lorsque le correctif vous ser
  
  Voir ici pour un rappel sur les promises : https://slides.com/stephmichel/ecmascript#/7/7
  
- 
+  (tag: TP2-ESIR-STEP6)
