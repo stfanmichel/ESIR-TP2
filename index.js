@@ -4,7 +4,7 @@
 
 const http = require('http')
 const debug = require('debug')('tp2-server')
-const {fileProperties} = require('./lib/fileProperties')
+const {fileProperties, fileList} = require('./lib/fileProperties')
 
 const port = 8000
 const path = './node_modules'
@@ -15,10 +15,15 @@ debug('Booting')
 const server = http.createServer((req, res) => {
     debug(`Request received ${req.method} ${req.url}`)
 
-    // Get file properties with file fileProperties module
-    fileProperties(path).then(result => {
+    // Get file list and then the file properties with file fileProperties module
+    fileList(path).then(fileList => {
+        return fileProperties(path, fileList)
+    }).then(result => {
         res.writeHead(200, {"Content-Type": "application/json"})
         res.end(JSON.stringify(result))
+    }).catch(reason => {
+        res.writeHead(404, {"Content-Type": "application/json"})
+        res.end(JSON.stringify(reason))
     })
 })
 
