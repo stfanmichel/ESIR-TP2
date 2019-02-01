@@ -12,19 +12,21 @@ const path = './node_modules'
 debug('Booting')
 
 // Configure our HTTP server
-const server = http.createServer((req, res) => {
+const server = http.createServer(async(req, res) => {
     debug(`Request received ${req.method} ${req.url}`)
 
-    // Get file list and then the file properties with file fileProperties module
-    fileList(path).then(fileList => {
-        return fileProperties(path, fileList)
-    }).then(result => {
+    try {
+        // Get file list and then the file properties with file fileProperties module
+        const fileArray = await fileList(path)
+        const fileArrayWithProperties = await fileProperties(path, fileArray)
+
         res.writeHead(200, {"Content-Type": "application/json"})
-        res.end(JSON.stringify(result))
-    }).catch(reason => {
+        res.end(JSON.stringify(fileArrayWithProperties))
+    } catch (exception) {
+        debug(exception)
         res.writeHead(404, {"Content-Type": "application/json"})
-        res.end(JSON.stringify(reason))
-    })
+        res.end(JSON.stringify(exception))
+    }
 })
 
 // Listen on port 8000, IP defaults to 127.0.0.1
