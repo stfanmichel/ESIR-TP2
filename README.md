@@ -158,4 +158,30 @@ Ceci vous permettra également de vous y retrouver lorsque le correctif vous ser
    
    Modifier également le code de la fonction pour utiliser fs.promises (https://nodejs.org/dist/latest-v10.x/docs/api/fs.html#fs_fs_promises_api) au lieu de fs. On remplacera en particulier la méthode fs.readdir par fsPromises.readdir  (https://nodejs.org/dist/latest-v10.x/docs/api/fs.html#fs_fspromises_readdir_path_options).
    
+   (tag: TP2-ESIR-STEP5)
    
+   BONUS : On peut aller un peu plus loin et faire un peu de refactoring afin de séparer la partie "récupération des fichiers" de la partie "récupération des properties" en deux méthodes distinctes. Ces deux méthodes que nous appellerons fileList(path) et fileProperties(fileListArray) retourneront chacune une promise.
+   Dans la page principale, le code d'appel ressemblera alors à :
+   
+    fileList(path)
+      .then(fileList => {
+        return fileProperties(path, fileList)
+      })
+      .then(result => {
+        res.writeHead(200, {"Content-Type": "application/json"})
+        res.end(JSON.stringify(result))
+      })
+      .catch(reason => {
+        res.writeHead(404, {"Content-Type": "application/json"})
+        res.end(JSON.stringify(reason))
+    })
+  
+   (tag: TP2-ESIR-STEP5-BONUS)
+   
+ # STEP 6 : Le même avec des async/await (après je ne vous embête plus...)
+ 
+ Maintenant que vous avez des promises partout, modifier le code afin de les appeler avec des async/await.
+ 
+ Voir ici pour un rappel sur les promises : https://slides.com/stephmichel/ecmascript#/7/7
+ 
+ 
