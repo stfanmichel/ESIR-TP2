@@ -1,12 +1,12 @@
 # ESIR-TP2 - Modules, asynchronisme et fs
 
-Objectifs :
+## Objectifs :
 
 - Comprendre et maitriser les différentes manières de faire de l'asynchronisme
 - Savoir découper en module son application
 - Savoir utiliser l'API fs
 
-Sujets abordés :
+## Sujets abordés :
 
 - callback
 - promess
@@ -14,7 +14,7 @@ Sujets abordés :
 - modules
 - fs
 
-Lien utiles :
+## Lien utiles :
 
 - Outillage (npm, node, git, ab, postman etc.) : https://slides.com/stephmichel/deck-4#/
 
@@ -27,16 +27,14 @@ Ceci vous permettra également de vous y retrouver lorsque le correctif vous ser
 
 # Initialisation d'un projet
 
-Idem TP1, que l'on rappelle ici. Vous pouvez également repartir du tag TP1-ESIR-INIT du TP1, faire une branche (git branch TP2) et vous positionner sur cette branche (git checkout TP2).
+Idem TP1, que l'on rappelle ici. Vous pouvez également repartir du tag **TP1-ESIR-INIT** du TP1, faire une branche (git branch TP2) et vous positionner sur cette branche (git checkout TP2).
 Sinon :
 
 - initialisation d'un projet node avec npm
 
-
     npm init
 
 - Initialisation GIT
-
 
     git init
 
@@ -44,11 +42,9 @@ Paramétrer son .gitignore à la racine du projet avec le site http://gitignore.
 
 - Installation du module nodemon
 
-
     npm i --save-dev nodemon
 
 - Installation et initialisation du module ESLINT
-
 
     npm i --save-dev eslint
     eslint --init
