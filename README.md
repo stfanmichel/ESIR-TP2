@@ -190,3 +190,5 @@ Maintenant que vous avez des promises partout, modifier le code afin de les appe
 Voir ici pour un rappel sur les promises : https://slides.com/stephmichel/ecmascript#/7/7
 
 (tag: **TP2-ESIR-STEP6**)
+
+[![Known Vulnerabilities](https://snyk.io/test/github/stfanmichel/ESIR-TP2/badge.svg)](https://snyk.io/test/github/stfanmichel/ESIR-TP2)
