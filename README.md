@@ -1,3 +1,5 @@
+[![Known Vulnerabilities](https://snyk.io/test/github/stfanmichel/ESIR-TP2/badge.svg)](https://snyk.io/test/github/stfanmichel/ESIR-TP2)
+
 # ESIR-TP2 - Modules, asynchronisme et fs
 
 ## Objectifs :
