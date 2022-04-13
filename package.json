@@ -23,7 +23,7 @@
     "nodemon": "^1.18.9"
   },
   "dependencies": {
-    "async": "^2.6.1",
+    "async": "^3.2.2",
     "debug": "^4.1.1",
     "snyk": "^1.233.0"
   },
